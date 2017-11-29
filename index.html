@@ -30,10 +30,16 @@
   <h2>リポジトリの操作</h2>
   <ul>
     <li>
-      <p>「git add」で既存のリポジトリの追加</p>
+      <p>「git add ファイル名」で既存のリポジトリの追加</p>
       </li>
      <li> <p>「git create」で新規ローカルリポジトリの作成</p></li>
      <li>「git clone」でリポジトリのクローンの作成</li>
+  </ol>
+  <h2>githubへのプッシュ</h2>
+  <ol>
+    <li>「git add .」でステージングする。これによりコミット可能な位置へ移動させる。</li>
+    <li>「git commit -m"任意のファイル名"」でコミットする。これによりgithubへのプッシュが可能になる。</li>
+    <li>「git push origin master」でgithubにプッシュする。これでgithubに反映され、更新されたことがgithubに記載される。</li>
   </ol>
 </body>
 </html>
