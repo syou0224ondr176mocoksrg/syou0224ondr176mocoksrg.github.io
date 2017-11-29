@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  h2{
+    margin-left:10px;
+  }
+  </style>
+</head>
+<body>
+  <h1>githubの使い方</h1>
+ <h2>ユーザー登録の手順</h2>
+  <ol>
+    <li>githubのユーザー名、メールアドレス、パスワードを登録する。</li>
+    <li>無料プランと有料プランがあるので、無料プランを選択する。「Choose your personal plan」から「Unlimited public repositories for free.」を選択し、<br>「continue」ボタンをクリックしよう。</li>
+    <li>アンケート入力画面が表示されたら、回答を入力して「submit」ボタンを押す。</li>
+    <li>登録確認メールを受信しているので、「Verify email address」のリンクをクリックする。</li>
+    <li>画面左上に「Your email was verifiled.」と表示されていれば登録完了。</li>
+  </ol>
+<h2>リポジトリの作成</h2>
+  <ol>
+    <li>登録完了画面から「Start a project」ボタンをクリックすることで、リポジトリの作成画面に進むことができる。</li>
+    <li>上から、リポジトリ名、リポジトリの説明を入力し、「Public」か「Private」を選択する。無料プランの際は選択できないので無視してリポジトリを作成する。</li>
+    <li>リポジトリの作成が完了した。「Quick setup」の欄に情報が表示されるので、必要な情報は控えておこう。</li>
+  </ol>
+  <h2>リポジトリの操作</h2>
+  <ul>
+    <li>
+      <p>「git add ファイル名」で既存のリポジトリの追加</p>
+      </li>
+     <li> <p>「git create」で新規ローカルリポジトリの作成</p></li>
+     <li>「git clone」でリポジトリのクローンの作成</li>
+  </ol>
+  <h2>githubへのプッシュ</h2>
+  <ol>
+    <li>「git add .」でステージングする。これによりコミット可能な位置へ移動させる。</li>
+    <li>「git commit -m"任意のファイル名"」でコミットする。これによりgithubへのプッシュが可能になる。</li>
+    <li>「git push origin master」でgithubにプッシュする。これでgithubに反映され、更新されたことがgithubに記載される。</li>
+  </ol>
+</body>
+</html>
