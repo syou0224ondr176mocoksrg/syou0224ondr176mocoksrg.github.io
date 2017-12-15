@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <label for="isbn">寿司ネタ：</label>
+      <select name="susi" id="susi">
+      <option value="egg.html">たまご</option>
+      <option value="salmon.html">サーモン</option>
+      <option value="maguro.html">まぐろ</option>
+    </select>
+  </form>
+      <img src="susi\玉子.jpg" alt=""たまご>
+      <script>
+          document.addEventListener('DOMContentLoaded',function(){
+            document.getElementById('susi').addEventListener('change',function(){
+              location.href = this.value;
+            },false);
+          },false);
+          </script>
+</body>
+</html>
