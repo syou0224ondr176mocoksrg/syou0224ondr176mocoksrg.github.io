@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  header{
+  background-color:aqua;
+  }
+  table th{
+    background-color: rgb(194, 190, 190);
+  }
+  h2.stitle1{
+    background-color: gray;
+  }
+  p.m1{
+    background-color: black;
+  }
+  table.tutorial1{
+    background-color:  rgb(207, 247, 247);
+  }
+  
+  </style>
+</head>
+<body><center>
+    <form>
+        <label for="isbn">メニュー：</label>
+        <select name="susi" id="susi">
+        <option value="">---選択してください---</option>
+        <option value="maguro.html">まぐろ</option>
+        <option value="salmon.html">サーモン</option>
+        <option value="egg.html">たまご</option>
+        <option value="git.html">git</option>
+        <option value="images.html">画像</option>
+        <option value="versioncheck.html">ブラウザ判定</option>
+        <option value="windows.html">windowメソッドの使い方</option>
+        <option value="console.html">consoleオブジェクトの使い方</option>
+        <option value="timer.html">タイマー</option>
+      </select>
+      </form>
+      <script>
+          document.addEventListener('DOMContentLoaded',function(){
+            document.getElementById('susi').addEventListener('change',function(){
+              location.href = this.value;
+            },false);
+          },false);
+          </script>
+  <header>
+    <hr><h1>consoleオブジェクトの使い方</h1><hr>
+  </header>
+  <h2>consoleメソッド一覧</h2>
+  <table border="1">
+    <tr><th>メソッド名</th><th>説明</th></tr>
+    <tr><td>log()</td><td>コンソールに「ログメッセージ」を出力します</td></tr>
+    <tr><td>info()</td><td>コンソールに「情報メッセージ」を出力します</td></tr>
+    <tr><td>warn()</td><td>コンソールに「警告メッセージ」を出力します</td></tr>
+    <tr><td>error()</td><td>コンソールに「エラーメッセージ」を出力します</td></tr>
+    <tr><td>dir()</td><td>コンソールに「オブジェクト」を出力します。プロパティ名と中身の値をまとめて確認できます</td></tr>
+    <tr><td>dirxml()</td><td>コンソールに「DOMオブジェクト」を出力します。DOMツリーの構造をまとめて確認できます</td></tr>
+    <tr><td>count()</td><td>コンソールに「デバッグメッセージ」と、「累計試行回数」を出力します</td></tr>
+    <tr><td>assert()</td><td>診断結果が偽の場合、コンソールに「エラーメッセージ」を出力します</td></tr>
+    <tr><td>trace()</td><td>コンソールに「現在の関数スタックの状態」を出力します</td></tr>
+    <tr><td>clear()</td><td>コンソール内をクリアします</td></tr>
+    <tr><td>time()</td><td>タイマー測定を開始します</td></tr>
+    <tr><td>timeEnd()</td><td>タイマー測定を終了します</td></tr>
+    <tr><td>profile()</td><td>プロファイルを開始します</td></tr>
+    <tr><td>profileEnd()</td><td>プロファイルを終了します</td></tr>
+    <tr><td>group()</td><td>グループ表示を開始します（展開された状態）</td></tr>
+    <tr><td>groupCollapsed()</td><td>グループ表示を開始します（折り畳まれた状態）</td></tr>
+    <tr><td>groupEnd()</td><td>グループ表示を終了します</td></tr>
+  </table></center>
+    <hr><h2 class="title1" align="left">■コンソールにログメッセージを出力する</h2><hr>
+    <table border="0" class="tutorial1"><tr><td><p id="tutorial1" window="50px">コンソールにログメッセージを出力するには、console.log()メソッドを使用します。<br><br>
+    出力結果は「ログ」に分類されます。</p></td></tr></table>
+    <h2 class="stitle1">●使用例</h2>
+    <p class="m1"><font color="white">●コンソールにログメッセージを出力する</font></p>
+    <table border="1" width="500px">
+    <tr><td><pre translate="no" class = "src_code"><code>
+        <span class = "comment">// 出力テスト</span>
+        <span class = "point"><font color="red"><b>console.log</b></font></span>("表示テスト");
+        </code></pre></td></tr></table><br>
+
+    <hr><h2 >■コンソールにオブジェクトを出力する</h2><hr>
+    <table border="0" class="tutorial1">
+    <tr><td><p>コンソールにオブジェクトを出力するには、console.dir()メソッドを使用します。<br><br>プロパティ名と、中身の値を、まとめて確認することができます。</p>
+</td></tr></table>
+    <h2 class="stitle1">●使用例</h2>
+    <p class="m1"><font color="white">●コンソールにオブジェクトを出力する</font></p>
+    <table border="1" width="500px">
+    <tr><td><pre translate="no" class = "src_code"><code>
+        <span>// オブジェクトを作成</span>
+        <span>var obj = {</span>
+          <span>aaa:true,</span>
+          <span>bbb:123,</span>
+          <span>ccc:"abc"</span>
+          <span>};</span><br>
+        <span>//コンソールにオブジェクトを出力する</span>
+          <span><font color="red"><b>console.dir(obj);</b></font></span>
+        </code></pre></td></tr></table><br><br>
+        <hr><h2 >■コンソールにデバッグメッセージと、累計実行回数を出力する</h2><hr>
+      <table border="0" class="tutorial1">
+        <tr>
+          <td>
+            コンソールにデバッグメッセージを出力するには、console.count()メソッドを使用します。<br><br>
+            同時に、実行した累計回数も出力されます。
+          </td>
+        </tr>
+      </table>
+      <h2 class="stitle1">●使用例</h2>
+      <p class="m1"><font color="white">●コンソールにオブジェクトを出力する</font></p>
+      <table border="1" width="500px">
+      <tr><td><pre translate="no" class = "src_code"><code>
+        <span>//--------------------------------</span>
+        <span>// 関数Aを定義</span>
+        <span>//--------------------------------</span>
+        <span>function FuncA(){</span><br>
+              <span>// countメソッドが利用可能</span>
+              <span>if(console.count){</span>
+                  <span>// コンソールにデバッグメッセージと、実行累計回数を出力する</span>
+                  <span><font color="red"><b>console.count("関数Aを実行した！！")</b></font></span>
+              <span>}</span>
+        <span>}</span><br>
+        <span>//関数Aを実行</span>
+        <span>FuncA();</span>
+        <span>FuncA();</span>
+        <span>FuncA();</span>
+          </code></pre></td></tr></table><br><br>
+        <hr><h2 >■タイマー測定について</h2><hr>
+        <table border="0" class="tutorial1">
+          <tr>
+            <td>
+                タイマー測定を開始するには、console.time()メソッドを使用します。
+            </td>
+          </tr>
+          <tr>
+            <td>
+              タイマー測定を終了するには、console.timeEnd()メソッドを使用します。<br>
+              このメソッドを呼び出した時点で、コンソールに経過時間が出力されます。
+            </td>
+          </tr>
+          </table>
+          <h2 class="stitle1">●使用例</h2>
+          <p class="m1"><font color="white">●タイマー測定を行い、結果をコンソールに出力する</font></p>
+          <table border="1" width="500px">
+          <tr><td><pre translate="no" class = "src_code"><code>
+            <span>//timeメソッドが利用可能</span>
+            <span>if(console.time){</span><br>
+                  <span>// タイマー測定を開始する</span>
+                  <span><font color="red"><b>console.time("測定テスト")</b></font></span><br>
+                  <span>// 測定したい任意のスクリプトを実行する</span>
+                  <span>var i;</span>
+                  <span>var a = [];</span>
+                  <span>for(i=0;i<1000000; i++){</span>
+                    <span>a[i] = i;</span>
+                  <span>}</span><br>
+                  <span>//タイマー測定を終了する</span>
+                  <span><font color="red"><b>console.timeEnd("測定テスト");</b></font></span>
+            <span>}</span>
+              </code></pre></td></tr></table><br><br>
+              <hr><h2 >■プロファイラについて</h2><hr>
+              <table border="0" class="tutorial1">
+                <tr>
+                  <td>
+                      プロファイラを開始するには、console.profile()メソッドを使用します。
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    プロファイラを終了するには、console.profileEnd()メソッドを使用します。<br>
+                    このメソッドを呼び出した時点で、コンソールに結果が出力されます。
+                  </td>
+                </tr>
+                </table>
+                <h2 class="stitle1">●使用例</h2>
+                <p class="m1"><font color="white">●プロファイラを開始し、エスケープキーが押されたら終了する</font></p>
+                <table border="1" width="500px">
+                <tr><td><pre translate="no" class = "src_code"><code>
+                <span>//profileメソッドが利用可能</span>
+                <span>if(console.profile){</span><br>
+                  <span>//プロファイルを開始する</span>
+                  <span><font color="red"><b>console.profile("Profile Test !!");</b></font></span><br>
+                  <span>// キーボードを押したときに実行されるイベント</span>
+                  <span>document.onkeydown = function (e){</span>
+                      <span>if(!e) e = window.event;  //レガシー</span><br>
+                      <span>// エスケープキーが押された</span>
+                      <span>if(e.keyCode == 27){</span><br>
+                            <span>//プロファイラを終了する</span>
+                            <span><font color="red"><b>console.profileEnd();</b></font></span>
+                      <span>}</span>
+                  <span>};</span>
+                <span>}</span>    
+                </code></pre></td></tr></table>
+      
+  </body>
+</html>
