@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>timer</title>
+  <script>
+      
+      var timer1; 
+      
+      
+      
+      function cntStart()
+      {
+        document.timer.elements[2].disabled=true;
+        timer1=setInterval("countDown()",1000);
+      }
+      
+      
+      function cntStop()
+      {
+        document.timer.elements[2].disabled=false;
+        clearInterval(timer1);
+      }
+      
+      
+      function countDown()
+      {
+        var min=document.timer.elements[0].value;
+        var sec=document.timer.elements[1].value;
+        
+        if( (min=="") && (sec=="") )
+        {
+          alert("時刻を設定してください！");
+          reSet();
+        }
+        else
+        {
+          if (min=="") min=0;
+          min=parseInt(min);
+          
+          if (sec=="") sec=0;
+          sec=parseInt(sec);
+          
+          tmWrite(min*60+sec-1);
+        }
+      }
+      
+      
+      function tmWrite(int)
+      {
+        int=parseInt(int);
+        
+        if (int<=0)
+        {
+          reSet();
+          alert("終わりです");
+        }
+        else
+        {
+          
+          document.timer.elements[0].value=Math.floor(int/60);
+          
+          document.timer.elements[1].value=int % 60;
+        }
+      }
+      
+      function reSet()
+      {
+        document.timer.elements[0].value="0";
+        document.timer.elements[1].value="0";
+        document.timer.elements[2].disabled=false;
+        clearInterval(timer1);
+      }  
+      </script>
+      <style>
+      h1{
+        background-color: rgb(8, 224, 8);
+      }
+      body{
+        background-color:;
+      }
+      table{
+        width: 500px;
+        height: 200px;
+        text-align: center;
+      }
+      </style>
+        <header><center>
+            <h1><font size="500px">タイマー</font></h1>
+          </center></header>
+</head>
+<body><center>
+    <form>
+        <label for="isbn">メニュー：</label>
+          <select name="susi" id="susi">
+          <option value="">---選択してください---</option>
+          <option value="maguro.html">まぐろ</option>
+          <option value="salmon.html">サーモン</option>
+          <option value="egg.html">たまご</option>
+          <option value="git.html">git</option>
+          <option value="images.html">画像</option>
+          <option value="versioncheck.html">ブラウザ判定</option>
+          <option value="windows.html">windowメソッドの使い方</option>
+          <option value="console.html">consoleオブジェクトの使い方</option>
+          <option value="timer.html">タイマー</option>
+          
+        </select>
+      </form>
+          <script>
+              document.addEventListener('DOMContentLoaded',function(){
+                document.getElementById('susi').addEventListener('change',function(){
+                  location.href = this.value;
+                },false);
+              },false);
+              </script>
+  <h2>時間を入力してください</h2>
+  <table border="1" align="center">
+      <tr><td><form name="timer">
+        <input type="text" value="">分
+        <input type="text" value="">秒<br><br>
+        <input type="button" value="スタート" style="width:100px; height:100px"onclick="cntStart()">
+        <input type="button" value="リセット" style="width:100px; height:100px" onclick="reSet()">
+        <input type="button" value="ストップ" style="width:100px; height:100px"onclick="cntStop()">
+        </form></td></tr></table>
+      </center>
+</body>
+</html>
