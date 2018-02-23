@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="jQuerySample.css">
+  <title>Document</title>
+</head>
+<body>
+  <center>
+    <form>
+        <label for="isbn">メニュー：</label>
+        <select name="susi" id="susi">
+        <option value="">---選択してください---</option>
+        <option value="maguro.html">まぐろ</option>
+        <option value="salmon.html">サーモン</option>
+        <option value="egg.html">たまご</option>
+        <option value="git.html">git</option>
+        <option value="images.html">画像</option>
+        <option value="versioncheck.html">ブラウザ判定</option>
+        <option value="windows.html">windowメソッドの使い方</option>
+        <option value="console.html">consoleオブジェクトの使い方</option>
+        <option value="timer.html">タイマー</option>
+        <option value="countdown.html">100まで表示</option>
+        <option value="lunch.html">ラーメン</option>
+        <option value="jQuerySample.html">jQuery集</option>
+      </select>
+      </form>
+      <script>
+          document.addEventListener('DOMContentLoaded',function(){
+            document.getElementById('susi').addEventListener('change',function(){
+              location.href = this.value;
+            },false);
+          },false);
+          </script>
+  <hr><h1><font size="60px">便利なJQuery集</font></h1><hr>
+  <br>
+<h2>アコーディオンの実装</h2>
+<p>アコーディオンはクリックすると下に出てくるjQueryです。</p>
+<img src="acordion.png" alt="acordion"><br>
+<a href="acordion.html">デモ</a><br>
+<a href="https://liginc.co.jp/web/js/jquery/34048">引用元：https://liginc.co.jp/web/js/jquery/34048</a><br>
+<h2>フェードアウトの実装</h2>
+<p>フェードアウトは、文字をクリックすると文字が消えるjQueryです。</p>
+<img src="fadeout.png" alt="fadeout"><br>
+<a href="fadeout.html">デモ</a><br>
+<a href="https://liginc.co.jp/web/js/jquery/34048">引用元：https://liginc.co.jp/web/js/jquery/34048</a><br>
+<h2>トップに戻るボタンの実装</h2>
+<p>右下のTOPに戻るボタンを押すとページ上部に戻ります。</p>
+<img src="To_top.png" alt="totop"><br>
+<a href="To_top.html">デモ</a><br>
+<a href="http://millkeyweb.com/jquerycode7/">引用元：http://millkeyweb.com/jquerycode7/</a>
+</center>
+</body>
+</html>

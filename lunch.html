@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<title>cookie</title>
+</head>
+
+<body>
+	<!-- <p><button id="write">書き込み</button></p> -->
+  <!-- <p><button id="delete">削除</button></p> -->
+  <form>
+    <label for="isbn">メニュー：</label>
+    <select name="susi" id="susi">
+    <option value="">---選択してください---</option>
+    <option value="maguro.html">まぐろ</option>
+    <option value="salmon.html">サーモン</option>
+    <option value="egg.html">たまご</option>
+    <option value="git.html">git</option>
+    <option value="images.html">画像</option>
+    <option value="versioncheck.html">ブラウザ判定</option>
+    <option value="windows.html">windowメソッドの使い方</option>
+    <option value="console.html">consoleオブジェクトの使い方</option>
+    <option value="timer.html">タイマー</option>
+    <option value="countdown.html">100まで表示</option>
+    <option value="lunch.html">ラーメン</option>
+    <option value="jQuerySample.html">jQuery集</option>
+  </select>
+  </form>
+  <script>
+      document.addEventListener('DOMContentLoaded',function(){
+        document.getElementById('susi').addEventListener('change',function(){
+          location.href = this.value;
+        },false);
+      },false);
+      </script>
+<hr>
+<script>
+// 書き込み
+function lunchmenu(){
+            if(document.cookie != ""){
+             window.alert("注文済みです。")
+             return;
+            }else{
+            if(lunchmenu_form.radio[0].checked == true){
+              hoge = "蒙古ラーメン";
+            }
+            if(lunchmenu_form.radio[1].checked == true){
+              hoge = "一楽ラーメン";
+            }
+            if(lunchmenu_form.radio[2].checked == true){
+              hoge = "節骨ラーメン";
+            }
+            text="";
+         if(lunchmenu_form.check[0].checked == true){
+          	text =text+ "、大盛";
+        }
+         if(lunchmenu_form.check[1].checked == true){
+          text = text + "、チャーシュー飯";
+         }
+         if(lunchmenu_form.check[2].checked == true){
+          text = text + "、半チャーハン";
+         }
+         if(lunchmenu_form.check[3].checked == true){
+           text = text + "、餃子";
+         }
+         document.cookie = "内容は"+hoge+text+"です。;max-age=180;path=/"
+         setTimeout('mes()',120000);
+}
+
+}
+function mes(){
+  alert("ヘイお待ち！");
+}
+
+</script>
+  <form name="lunchmenu_form" action="form_lunchmenu.html">
+    <p>ご注文はなんでしょう♪
+      <table>
+    <tr><td><input type="radio" name="radio" value="蒙古ラーメン">蒙古ラーメン</td><td><input type="radio" name="radio" value="一楽ラーメン">一楽ラーメン</td><td><input type="radio" name="radio" value="節骨ラーメン">節骨ラーメン</td><br></tr>
+    </table></p>
+    <p>オプションはいかがですか♪</p><br>
+    <tr><td><input type="checkbox" name="check" value="大盛">大盛</td><td><input type="checkbox" name="check" value="チャーシュー飯">チャーシュー飯</td><td><input type="checkbox" name="check" value="半チャーハン">半チャーハン</td><td><input type="checkbox" name="check" value="餃子">餃子</td></tr><br>
+    <br><input type="button" id="lunch" value="注文" onclick="lunchmenu()">
+  </form>
+</body>
+</html>
