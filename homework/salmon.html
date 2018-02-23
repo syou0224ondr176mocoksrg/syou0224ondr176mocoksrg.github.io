@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body><center>
+  <form>
+    <label for="isbn">メニュー：</label>
+      <select name="susi" id="susi">
+      <option value="">---選択してください---</option>
+      <option value="maguro.html">まぐろ</option>
+      <option value="salmon.html">サーモン</option>
+      <option value="egg.html">たまご</option>
+      <option value="git.html">git</option>
+      <option value="images.html">画像</option>
+      <option value="versioncheck.html">ブラウザ判定</option>
+      <option value="windows.html">windowメソッドの使い方</option>
+      <option value="console.html">consoleオブジェクトの使い方</option>
+      <option value="timer.html">タイマー</option>
+      <option value="countdown.html">100まで表示</option>
+      <option value="lunch.html">ラーメン</option>
+      <option value="jQuerySample.html">jQuery集</option>
+    </select>
+  </form>
+      <img src="susi\salmon.jpg" alt="サーモン" height="50%" width="50%">
+      <script>
+          document.addEventListener('DOMContentLoaded',function(){
+            document.getElementById('susi').addEventListener('change',function(){
+              location.href = this.value;
+            },false);
+          },false);
+          </script></center>
+</body>
+</html>

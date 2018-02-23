@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body><center>
+      <form>
+          <label for="isbn">メニュー：</label>
+          <select name="susi" id="susi">
+          <option value="">---選択してください---</option>
+          <option value="maguro.html">まぐろ</option>
+          <option value="salmon.html">サーモン</option>
+          <option value="egg.html">たまご</option>
+          <option value="git.html">git</option>
+          <option value="images.html">画像</option>
+          <option value="versioncheck.html">ブラウザ判定</option>
+          <option value="windows.html">windowメソッドの使い方</option>
+          <option value="console.html">consoleオブジェクトの使い方</option>
+          <option value="timer.html">タイマー</option>
+          <option value="countdown.html">100まで表示</option>
+          <option value="lunch.html">ラーメン</option>
+          <option value="jQuerySample.html">jQuery集</option>
+        </select>
+        </form>
+        <script>
+            document.addEventListener('DOMContentLoaded',function(){
+              document.getElementById('susi').addEventListener('change',function(){
+                location.href = this.value;
+              },false);
+            },false);
+            </script>
+  <h2>window.openの使い方</h2>
+<table border="1" width="500px">
+ <tr><td> var win = window.open(<br>
+      url,          // ウィンドウで開くURL<br>
+      name          // ウィンドウの名前<br>
+      [, features ] // ウィンドウのサイズと制御機能<br>
+    </td></tr></table>
+    <p><hr>urlで異なるホストのページを指定した場合、そのプロパティにアクセスすると<br>「Permission denined to access property "XX"」のように例外が発生します。<hr>
+    nameを"_blank"か空文字にすると、追加でopen()を呼び出したとき新しいウィンドウ<br>で開かれます。これを同じウィンドウで表示されるようにするには、固有の名前を指定します。<hr>
+    featuresで、ウィンドウのサイズや機能を指定します。これを指定しないときは、<br>ウィンドウは全ての機能を持ちます。一方で特定の機能を指定したときは、その機能のみを持ちます。<hr></p>
+    <table border="1"><tr><th>left</th><th>ウィンドウのX座標</th><th>数値</th></tr>
+          <tr><th>top</th><th>ウィンドウのY座標</th><th>数値</th></tr>
+          <tr><th>width</th><th>ウィンドウのドキュメント表示領域の幅</th><th>数値</th></tr>
+          <tr><th>height</th><th>ウィンドウのドキュメント表示領域の高さ</th><th>数値</th></tr>
+          <tr><th>centerscreen</th><th>yesのとき、親ウィンドウの中央に表示</th><th>yes,no</th></tr>
+          <tr><th>menubar</th><th>yesのとき、メニューバーを表示</th><th>yes,no</th></tr>
+          <tr><th>toolbar</th><th>yesのとき、ナビゲーションツールバーとタブバーを表示</th><th>yes,no</th></tr>
+          <tr><th>location</th><th>yesのとき、ロケーションバーを表示</th><th>yes,no</th></tr>
+    </table>
+    <p>実行例</p>
+    <table border="1" width="500px">
+        <tr><td>window.open(<br>
+          'https://www.yahoo.co.jp/',<br>
+          'sample',<br>
+          'height=100,centerscreen,resizable' )</td></tr>
+    </table>
+    <a href="javascript:;" onclick="window.open('https://www.yahoo.co.jp/', 'sample', 'height=100,centerscreen,resizable'); return false">ここ</a>をクリックすると、ウィンドウが開きます。
+    <hr><h2>window.closeの使い方</h2>
+    <p>このメソッドで閉じることができるのは、open()で開いたウィンドウのみです。</p>
+    <p>実行例</p>
+      <table border="1" width="200">
+        <tr><td>widow.close()<br><hr>
+        function closewin(){
+          window.close();}
+      </td></tr></table>
+      <hr><h2>window.focus()の使い方</h2>
+      <p>focusメソッドは、指定したウィンドウにフォーカスをあてます。ウィンドウが重なっている場合には、指定したウィンドウが前面へ移動します。</p>
+      <table border="1" width="200">
+        <tr><td>funtion sample(){<br>
+                sample.focus();}
+              
+              </td></tr>
+      </table>
+        </table>
+  </center>
+</body>
+</html>

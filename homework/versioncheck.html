@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body><center>
+    <form>
+        <label for="isbn">メニュー：</label>
+      
+          <select name="susi" id="susi">
+          <option value="">---選択してください---</option>
+          <option value="maguro.html">まぐろ</option>
+          <option value="salmon.html">サーモン</option>
+          <option value="egg.html">たまご</option>
+          <option value="git.html">git</option>
+          <option value="images.html">画像</option>
+          <option value="versioncheck.html">ブラウザ判定</option>
+          <option value="windows.html">windowメソッドの使い方</option>
+          <option value="console.html">consoleオブジェクトの使い方</option>
+          <option value="timer.html">タイマー</option>
+          <option value="countdown.html">100まで表示</option>
+          <option value="lunch.html">ラーメン</option>
+          <option value="jQuerySample.html">jQuery集</option>
+        </select>
+      </form>
+  <script>
+
+var nvUA = navigator.userAgent;
+var cutSt,cutEd;  //バージョンを切り出す位置情報を取得
+var bwVer;    //バージョンを格納
+
+//Operaか調べる
+if ( nvUA.indexOf("Opera") != -1 )
+{
+  //開始位置の指標「Version」の位置を取得、終了位置は文字列長
+  cutSt = nvUA.indexOf("Version");
+  cutEd   = nvUA.length;
+  
+  //バージョンの切り出し
+  bwVer = nvUA.substring(cutSt+8,cutEd);
+  
+  //頭に「Opera」を付けてバージョンを書き出す
+  document.write("ブラウザ:Opera　　")
+  document.write("バージョン："+bwVer);
+}
+
+//「Safari」が含まれるか調べる
+if ( nvUA.indexOf("Safari") != -1 )
+{
+  //「Chrome」が含まれるか調べる
+  if ( nvUA.indexOf("Chrome") != -1 )
+  {
+    cutSt = nvUA.indexOf("Chrome");
+    cutEd   = nvUA.indexOf(" ",cutSt);
+    
+    bwVer =nvUA.substring(cutSt+7,cutEd);
+    
+    document.write("ブラウザ：Google Chrome　　");
+    document.write("バージョン："+bwVer);
+  }
+  else
+  {
+    cutSt = nvUA.indexOf("Version");
+    cutEd   = nvUA.indexOf(" ",cutSt);
+    
+    bwVer = nvUA.substring(cutSt+8,cutEd);
+    
+    document.write("ブラウザ：Safari　　");
+    document.write("バージョン："+bwVer);
+  }
+}
+
+
+</script>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+          document.getElementById('susi').addEventListener('change',function(){
+            location.href = this.value;
+          },false);
+        },false);
+        </script>
+   </center>
+</body>
+</html>

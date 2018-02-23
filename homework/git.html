@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body><center>
+  <form>
+    <label for="isbn">メニュー：</label>
+  
+      <select name="susi" id="susi">
+      <option value="">---選択してください---</option>
+      <option value="maguro.html">まぐろ</option>
+      <option value="salmon.html">サーモン</option>
+      <option value="egg.html">たまご</option>
+      <option value="git.html">git</option>
+      <option value="images.html">画像</option>
+      <option value="versioncheck.html">ブラウザ判定</option>
+      <option value="windows.html">windowメソッドの使い方</option>
+      <option value="console.html">consoleオブジェクトの使い方</option>
+      <option value="timer.html">タイマー</option>
+      <option value="countdown.html">100まで表示</option>
+      <option value="lunch.html">ラーメン</option>
+      <option value="jQuerySample.html">jQuery集</option>
+    </select>
+  </form>
+      <img src="octcat.jpg" alt="オクトキャット" height="50%" width="50%">
+      <script>
+          document.addEventListener('DOMContentLoaded',function(){
+            document.getElementById('susi').addEventListener('change',function(){
+              location.href = this.value;
+            },false);
+          },false);
+          </script></center>
+
+          <h1>gitの使い方</h1>
+            <table border="1">
+              <tr><td width="100px">リポジトリ</td><td>gitを含むVCSは基本的な機能として時系列でファイルの記録を管理でき、この記録を管理するデータベースを「リポジトリ」と呼びます。</td></tr>
+              <tr><td>コミット</td><td>gitでは、リポジトリに現状のファイルの内容を記録することや、その結果作られた記録のことを「コミット」と呼びます。</td></tr>
+              <tr><td>ワークツリー</td><td>「ワークツリー」とは、普通のフォルダのようなものです。普通のフォルダと異なるのは、ワークツリーにあるファイルの変更がGitによって監視されているという点のみ。</td></tr>
+              <tr><td>ステージング</td><td>ワークツリーがカメラの被写体で、コミットがシャッターを押すことであれば、次にとる写真にどのモチーフを入れるか、構図を決める作業が「ステージング」です。</td></tr>
+              <tr><td>ブランチ</td><td>「ブランチ」とは、複数の機能を同時に開発するときに使われる、コミットの系譜の枝話帰れのことを指した概念です。</td></tr>
+              <tr><td>コンフリクト</td><td>ブランチはファイルの衝突を先伸ばしにすることはできますが、完全に衝突を阻止することは出来ません。同じファイルが2つのブランチでそれぞれ変更され、どうしてもGitでは中身を合体できない、という状況にあると「コンフリクト」が発生します。</td></tr>
+            </table>
+          <h1>github pagesの作り方</h1>
+          <h2>　新規リポジトリからの作り方</h2>
+          <ol>
+            <li>空リポジトリを作る</li>
+            <li>ブランチにindex.htmlを作成</li>
+            <li>完成</li>
+          </ol>
+          <h2>　既存リポジトリからの作り方</h2>
+          <ol>
+          <li>git checkout --orphan gh-pagesでブランチ作成</li>
+          <li>git rm -rf .ですべてのファイルを削除</li>
+          <li>pushする</li>
+          <li>完成</li>
+          </ol>
+          <h1>github pagesの更新の仕方</h1>
+          <table border="1">
+            <tr><td>git add --all</td><td>全てのファイルをステージング</td></tr>
+            <tr><td>git commit -m "Update page"</td><td>変更をコミット</td></tr>
+            <tr><td>git push -u origin master</td><td>「master」ブランチをプッシュ</td></tr>
+            <tr><td>git push -u origin gh-pages</td><td>「gh-pages」ブランチをプッシュ</td></tr>
+          </table>
+</body>
+</html>
