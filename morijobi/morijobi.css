@@ -1,0 +1,18 @@
+li{
+  display: inline-block;
+  /* font-size: 25px; */
+}
+
+body{
+  max-width: 960px;
+}
+
+div:hover{
+  color: orange;
+  background-color: white;
+}
+
+table.tr{
+  width: 200mm;
+  height: 200mm;
+}
