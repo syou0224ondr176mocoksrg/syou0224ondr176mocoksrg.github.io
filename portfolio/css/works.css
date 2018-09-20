@@ -1,0 +1,24 @@
+div#menu a:nth-child(3){
+  color: gray;
+}
+
+ul{
+  margin-top: 100px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+ul li img{
+  width: 20vw;
+  height: 20vw;
+}
+
+ul li{
+  padding: 10px;
+  text-align: left;
+}
+ul li p{
+  text-align: center;
+  font-size: 2vw;
+}

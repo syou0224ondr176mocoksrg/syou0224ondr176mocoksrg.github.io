@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link href="https://fonts.googleapis.com/css?family=Poor+Story|Roboto+Mono|Slabo+27px" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Poor+Story|Roboto+Mono" rel="stylesheet">
+  <title>Works</title>
+</head>
+<body id="nice">
+      <header>
+          <p id="nb">C o n t a c t</p>
+          <div id="menu">
+            <a href="top.html" class="fadelink">Top</a>
+            <a href="about.html" class="fadelink">About</a>
+            <a href="works.html" class="fadelink">Works</a>
+            <a href="" class="fadelink">Contact</a>
+          </div>
+      </header>
+
+      <hr>
+
+      <section class="about">
+        
+      </section>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript">
+        $('#nice').delay(800 ).fadeIn("slow");
+        $('#nb').delay(1000 ).fadeIn("slow");
+        $('#menu').delay(1000 ).fadeIn("slow");
+        $(function(){
+  $('a.fadelink').on("click",function() {
+    var url = $(this).attr('href');
+    if (url != '') {
+      $('body').fadeOut(800);
+      setTimeout(function(){
+        location.href = url;
+      }, 800);
+    }
+    return false;
+  });
+});
+     </script>
+</body>
+</html>
