@@ -1,3 +1,27 @@
 div#menu a:nth-child(4){
   color: gray;
 }
+form{
+  margin: 0 auto;
+  text-align: center;
+}
+table{
+  padding-top: 5%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2vw;
+}
+section.about p{
+  text-align: center;
+  padding-bottom: 10%;
+  font-size: 2vw;
+}
+textarea{
+  resize: none;
+}
+.seibetu th{
+  padding: 20px 0;
+}
+.seibetu td{
+  padding: 20px 0;
+}

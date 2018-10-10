@@ -9,57 +9,91 @@
   <link rel="stylesheet" href="css/about.css">
   <link href="https://fonts.googleapis.com/css?family=Poor+Story|Roboto+Mono|Slabo+27px" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Poor+Story|Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <title>About</title>
 </head>
 <body id="nice">
-      <header>
-          <p id="nb">A b o u t</p>
-          <div id="pcTop">
-          <div id="menu">
-            <a href="top.html" class="fadelink">Top</a>
-            <a href="" class="fadelink">About</a>
-            <a href="works.html" class="fadelink">Works</a>
-            <a href="contact.html" class="fadelink">Contact</a>
-          </div>
-          </div>
-      </header>
-
+          <header id="nice">
+            <div id="mobTop">
+              <div id="nav-drawer">
+                  <input id="nav-input" type="checkbox" class="nav-unshown">
+                  <label id="nav-open" for="nav-input"><span></span></label>
+                  <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+                  <div id="nav-content">
+                      <nav class="nav-wrap">
+                          <ul class="nav_hun">
+                            <li><a href="top.html">TOP</a></li>
+                            <li><a href="works.html">WORKS</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                          </ul>
+                          </nav>
+                  </div>
+              </div>
+            </div>
+              <p id="nb">A b o u t</p>
+            <div id="pcTop">
+              <div id="menu">
+                <a href="top.html" class="fadelink">Top</a>
+                <a href="" class="fadelink">About</a>
+                <a href="works.html" class="fadelink">Works</a>
+                <a href="contact.html" class="fadelink">Contact</a>
+              </div>
+            </div>
+          </header>
       <hr>
 
       <section class="about">
         <div class="about1">
-        <p class="syoukai">小野寺翔と申します。</p>
+          <p class="syoukai">小野寺翔と申します。</p>
         <p class="syoukai">盛岡情報ビジネス専門学校でWEBの勉強をしています。</p>
         </div>
 
         <div class="about2">
-        <h2 class="syoukai">資格</h2>
+        <h2>資格</h2>
         <ul class="syoukai">
-          <li>基本情報技術者試験</li>
-          <li>Java検定3級</li>
+          <li>
+              <i class="fas fa-book-open fa-lg"></i>
+            基本情報技術者試験</li>
+            <p></p>
+          <li>
+              <i class="fas fa-graduation-cap fa-lg"></i>
+          Java検定3級</li>
+          <p></p>
+          <li>
+            <i class="fas fa-book-open fa-lg"></i>
+            英検3級
+          </li>
+          <p></p>
+          <li>
+            <i class="fas fa-book-open fa-lg"></i>
+            漢検3級
+          </li>
         </ul>
         </div>
 
         <div class="about3">
-        <h2 class="syoukai">言語</h2>
+        <h2>言語</h2>
         <ul class="syoukai">
-          <li>HTML</li>
-          <li>css</li>
-          <li>Java</li>
+          <li>
+              <i class="fab fa-html5 fa-lg"></i>HTML</li>
+              <p></p>
+          <li><i class="fab fa-css3-alt fa-lg"></i>css</li>
+          <p></p>
+          <li><i class="fab fa-java fa-lg"></i>Java</li>
         </ul>
         </div>
 
         <div class="about4">
         <h2 class="syoukai">趣味</h2>
         <ul class="syoukai last">
-          <li>ゲーム</li>
-          <li>旅行</li>
+          <li><i class="fas fa-gamepad fa-lg"></i>ゲーム</li>
+          <p></p>
+          <li><i class="fas fa-plane"></i>旅行</li>
         </ul>
         </div>
       </section>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="js/fadein.js"></script>
       <script src="js/float.js"></script>
-     </script>
 </body>
 </html>

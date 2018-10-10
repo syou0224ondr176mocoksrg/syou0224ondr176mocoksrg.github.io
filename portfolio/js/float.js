@@ -4,7 +4,7 @@ $(window).scroll(function(){
      topWindow = $(window).scrollTop();
  $('.syoukai').each(function(){
   var targetPosition = $(this).offset().top;
-  if(topWindow > targetPosition - windowHeight + 100){
+  if(topWindow > targetPosition - windowHeight - 50){
    $(this).addClass("fadeInDown");
   }
  });

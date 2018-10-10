@@ -12,20 +12,65 @@
   <title>Works</title>
 </head>
 <body id="nice">
-      <header>
+      <header id="nice">
+          <div id="nav-drawer">
+              <input id="nav-input" type="checkbox" class="nav-unshown">
+              <label id="nav-open" for="nav-input"><span></span></label>
+              <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+              <div id="nav-content">
+                <nav class="nav-wrap">
+                <ul class="nav_hun">
+                  <li><a href="top.html">TOP</a></li>
+                  <li><a href="about.html">ABOUT</a></li>
+                  <li><a href="works.html">WORKS</a></li>
+                </ul>
+                </nav>
+              </div>
+          </div>
           <p id="nb">C o n t a c t</p>
+          <div id="pcTop">
           <div id="menu">
             <a href="top.html" class="fadelink">Top</a>
             <a href="about.html" class="fadelink">About</a>
             <a href="works.html" class="fadelink">Works</a>
             <a href="" class="fadelink">Contact</a>
           </div>
+          </div>
       </header>
 
       <hr>
 
       <section class="about">
-        
+        <form action="./postmail.cgi" method="post" id="formmail">  
+          <input type="hidden" name="need" value="email 性別 ページ" />  
+          <input type="hidden" name="match" value="email email2" />  
+          <table border="0" cellpadding="0" cellspacing="0" summary="お問い合せフォーム">  
+          <tr>  
+          <th>おなまえ<span></span></th>  
+          <td><input type="text" name="name" size="35" required/></td>  
+          </tr>  
+          <tr>  
+          <th>メールアドレス<span></span></th>  
+          <td><input type="text" name="email" size="35" required/></td>  
+          </tr>
+          <tr class="seibetu">
+          <th>性別<span></span></th>
+          <td>  
+          <input type="radio" name="性別" value="男" />男  
+          <input type="radio" name="性別" value="女" />女  
+          </td>
+          </tr>
+          <tr>
+          <th>メッセージ</th>
+          <td>
+          <p><textarea name="メッセージ" rows="6" cols="40"></textarea></p>  
+          <input type="submit" value="送信する" /><input type="reset" value="リセット" />  
+          </td>
+          </tr>
+          </table>
+          </form>
+          <p>Eメール：moco.0224176@gmail.com</p>
+
       </section>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script type="text/javascript">
