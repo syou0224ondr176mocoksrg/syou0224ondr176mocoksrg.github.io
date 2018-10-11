@@ -67,10 +67,10 @@ header{
   height: 3px;/*線の太さ*/
   width: 25px;/*長さ*/
   border-radius: 3px;
-  background: #555;
   display: block;
   content: '';
   cursor: pointer;
+  background: #fff;
 }
 #nav-open span:before {
   bottom: -8px;
@@ -100,7 +100,7 @@ header{
   top: 0;
   left: 0;
   z-index: 9999;/*最前面に*/
-  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  width: 50%;/*右側に隙間を作る（閉じるカバーを表示）*/
   max-width: 330px;/*最大幅（調整してください）*/
   height: 100%;
   background: #fff;/*背景色*/
@@ -235,9 +235,14 @@ header p#nb{
   margin: 0;
   padding: 0;
 }
-
-#nav-drawer {
-  position: relative;
+ul.nav_hun{
+  padding-left: 0;
+}
+ul.nav_hun li{
+  padding: 10px 0;
+  font-size: 5vw;
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
 }
 }
 /* ----------------------------------------------------------mobile */
