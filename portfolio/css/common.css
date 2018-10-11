@@ -21,10 +21,32 @@ header div#menu{
   margin-top: 20%;
   display: none;
 }
-
+div#nav-content{
+  text-align: center;
+}
+ul li{
+  list-style: none;
+}
+section{
+  width: 80%;
+  margin: 0 auto;
+}
 hr{
   margin: 0;
   padding: 0;
+}
+a:active{
+  color: rgb(85, 26, 139);
+}
+
+/* ハンバーガー */
+header{
+  padding: 10px;
+  background: skyblue;
+}
+
+#nav-drawer{
+  position: relative;
 }
 /*チェックボックス等は非表示に*/
 .nav-unshown {
@@ -98,6 +120,9 @@ hr{
   transform: translateX(0%);/*中身を表示（右へスライド）*/
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
+/* ↑ハンバーガー */
+
+/* fadein */
 .fadeInDown {
   -webkit-animation-fill-mode:both;
   -ms-animation-fill-mode:both;

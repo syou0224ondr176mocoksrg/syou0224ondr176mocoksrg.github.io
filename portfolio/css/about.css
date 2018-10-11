@@ -5,7 +5,8 @@ div#menu a:nth-child(2){
 section.about{
   text-align: center;
   font-size: 3vw; 
-  /* background-image: url(../images/about_bg1.jpeg); */
+  
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -13,7 +14,9 @@ div.about1{
   padding-bottom: 200px;
   padding-top: 150px;
 }
-
+div.about1 img{
+  width: 50%;
+}
 div.about2{
   padding-top: 150px;
   padding-bottom: 200px;
@@ -54,4 +57,12 @@ h2.syoukai{
 
 ul.last{
   margin-bottom: 100px;
+}
+@media screen and (max-width: 799px){
+  section.about{
+    font-size: 5vw;
+  }
+  div.about1 img{
+    width: 100%;
+  }
 }
