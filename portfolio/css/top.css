@@ -2,7 +2,6 @@ body{
   display: block;
 }
 header{
-  background: url(../images/header.jpeg) no-repeat;
   background-size: cover;
   width: 100%;
   display: none;
@@ -20,7 +19,6 @@ p#target_msg_box{
   color: white;
   margin: 0;
   text-align: center;
-  font-size: 100px;
   display: none;
 }
 
@@ -31,10 +29,17 @@ div#menu a:hover{
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-/* section.top{
-  display: none;
+
+ul.nav_hun li:first-child a{
+  text-decoration: none;
+  color: gray;
+  cursor: default;
 }
-section.top img{
-  width: 50%;
-  height: 50%;
-} */
+@media screen and (max-width: 799px){
+  header{
+  height: 100vh;
+  }
+  p#nb{
+    padding-top: 100px!important;
+  }
+}

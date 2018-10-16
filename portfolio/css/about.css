@@ -1,11 +1,14 @@
 div#menu a:nth-child(2){
   color: gray;
 }
-
+ul.nav_hun li:nth-child(2) a{
+  text-decoration: none;
+  color: gray;
+  cursor: default;
+}
 section.about{
   text-align: center;
-  font-size: 3vw; 
-  
+  font-size: 3vw;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/contact.css">
   <link href="https://fonts.googleapis.com/css?family=Poor+Story|Roboto+Mono|Slabo+27px" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Poor+Story|Roboto+Mono" rel="stylesheet">
-  <title>Works</title>
+  <title>小野寺's Works</title>
 </head>
 <body id="nice">
       <header id="nice">
@@ -23,6 +23,7 @@
                   <li><a href="index.html">TOP</a></li>
                   <li><a href="about.html">ABOUT</a></li>
                   <li><a href="works.html">WORKS</a></li>
+                  <li><a href="">CONTACT</a></li>
                 </ul>
                 </nav>
               </div>
@@ -73,22 +74,6 @@
 
       </section>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script type="text/javascript">
-        $('#nice').delay(800 ).fadeIn("slow");
-        $('#nb').delay(1000 ).fadeIn("slow");
-        $('#menu').delay(1000 ).fadeIn("slow");
-        $(function(){
-  $('a.fadelink').on("click",function() {
-    var url = $(this).attr('href');
-    if (url != '') {
-      $('body').fadeOut(800);
-      setTimeout(function(){
-        location.href = url;
-      }, 800);
-    }
-    return false;
-  });
-});
-     </script>
+      <script src="js/fadein.js"></script>
 </body>
 </html>
